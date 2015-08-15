@@ -1,0 +1,38 @@
+name       : gitg
+version    : 3.16.1
+release    : 1
+source     :
+    - https://download.gnome.org/sources/gitg/3.16/gitg-3.16.1.tar.xz : 914e964402dadda152c7e034906d84e266c474603f58bc1a300f2a1659615569
+license    : GPL-2.0
+summary    : gitg is the GNOME GUI client to view git repositories.
+description: |
+    gitg is the GNOME GUI client to view git repositories.
+builddeps  :
+    - pkgconfig(gee-0.8)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(gsettings-desktop-schemas)
+    - pkgconfig(gtkspell3-3.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gtksourceview-3.0)
+    - pkgconfig(json-glib-1.0)
+    - pkgconfig(libgit2-glib-1.0)
+    - pkgconfig(libpeas-gtk-1.0)
+    - pkgconfig(libsecret-1)
+    - pkgconfig(libsoup-2.4)
+    - pkgconfig(pygobject-3.0)
+    - pkgconfig(vapigen-0.28)
+    - pkgconfig(webkit2gtk-3.0)
+    - pkgconfig(webkit2gtk-4.0)
+    - gnome-common
+    - git
+    - intltool
+    - vala
+setup      : |
+    rm -f *.gir
+    NOCONFIGURE=1 ./autogen.sh
+    LIBGITG_CFLAGS=$CFLAGS GITG_CFLAGS=$CFLAGS %configure --prefix=/usr --disable-static --disable-maintainer-mode
+build      : |
+    make Gitg-1.0.gir
+    %make
+install    : |
+    %make_install
