@@ -7,6 +7,8 @@ license    : GPL-2.0
 summary    : gitg is the GNOME GUI client to view git repositories.
 description: |
     gitg is the GNOME GUI client to view git repositories.
+clang : no
+libsplit : no
 builddeps  :
     - pkgconfig(gee-0.8)
     - pkgconfig(gobject-introspection-1.0)
@@ -28,11 +30,9 @@ builddeps  :
     - intltool
     - vala
 setup      : |
-    rm -f *.gir
     NOCONFIGURE=1 ./autogen.sh
-    LIBGITG_CFLAGS=$CFLAGS GITG_CFLAGS=$CFLAGS %configure --prefix=/usr --disable-static --disable-maintainer-mode
+    %configure --prefix=/usr --disable-static --disable-maintainer-mode
 build      : |
-    make Gitg-1.0.gir
     %make
 install    : |
     %make_install
