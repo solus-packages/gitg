@@ -1,8 +1,8 @@
 name       : gitg
-version    : 3.16.1
-release    : 2
+version    : 3.18.0
+release    : 3
 source     :
-    - https://download.gnome.org/sources/gitg/3.16/gitg-3.16.1.tar.xz : 914e964402dadda152c7e034906d84e266c474603f58bc1a300f2a1659615569
+    - https://download.gnome.org/sources/gitg/3.18/gitg-3.18.0.tar.xz : fa4b7b9c492f13f5f1d864af1281ea377ac8c7619c856e05f533b18989edf421
 license    : GPL-2.0
 summary    : gitg is the GNOME GUI client to view git repositories.
 description: |
@@ -29,7 +29,6 @@ builddeps  :
     - intltool
     - vala
 setup      : |
-    NOCONFIGURE=1 ./autogen.sh
     %configure --prefix=/usr --disable-static --disable-maintainer-mode
 build      : |
     %make
