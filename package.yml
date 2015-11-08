@@ -1,6 +1,6 @@
 name       : gitg
 version    : 3.18.0
-release    : 3
+release    : 4
 source     :
     - https://download.gnome.org/sources/gitg/3.18/gitg-3.18.0.tar.xz : fa4b7b9c492f13f5f1d864af1281ea377ac8c7619c856e05f533b18989edf421
 license    : GPL-2.0
@@ -21,7 +21,7 @@ builddeps  :
     - pkgconfig(libsecret-1)
     - pkgconfig(libsoup-2.4)
     - pkgconfig(pygobject-3.0)
-    - pkgconfig(vapigen-0.28)
+    - pkgconfig(vapigen)
     - pkgconfig(webkit2gtk-3.0)
     - pkgconfig(webkit2gtk-4.0)
     - gnome-common
