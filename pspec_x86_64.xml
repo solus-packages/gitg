@@ -2,8 +2,8 @@
     <Source>
         <Name>gitg</Name>
         <Packager>
-            <Name>Joshua Strobl</Name>
-            <Email>joshua.strobl@outlook.com</Email>
+            <Name>Your Name Here</Name>
+            <Email>your.email@address</Email>
         </Packager>
         <License>GPL-2.0</License>
         <Summary xml:lang="en">gitg is the GNOME GUI client to view git repositories.</Summary>
@@ -27,7 +27,7 @@
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/python3.4</Path>
+            <Path fileType="library">/usr/lib/python3.5</Path>
             <Path fileType="library">/usr/lib64/lib*.so.*</Path>
             <Path fileType="library">/usr/lib64/lib*.so</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0</Path>
@@ -50,12 +50,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2015-11-08</Date>
+        <Update release="5">
+            <Date>2016-02-17</Date>
             <Version>3.18.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joshua Strobl</Name>
-            <Email>joshua.strobl@outlook.com</Email>
+            <Name>Your Name Here</Name>
+            <Email>your.email@address</Email>
         </Update>
     </History>
 </PISI>
