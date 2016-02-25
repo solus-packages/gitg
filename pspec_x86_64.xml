@@ -2,8 +2,8 @@
     <Source>
         <Name>gitg</Name>
         <Packager>
-            <Name>Your Name Here</Name>
-            <Email>your.email@address</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Packager>
         <License>GPL-2.0</License>
         <Summary xml:lang="en">gitg is the GNOME GUI client to view git repositories.</Summary>
@@ -18,20 +18,20 @@
 </Description>
         <PartOf>programming</PartOf>
         <Files>
-            <Path fileType="data">/usr/share/appdata</Path>
-            <Path fileType="data">/usr/share/glib-2.0</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="data">/usr/share/gitg</Path>
-            <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="data">/usr/share/gir-1.0</Path>
-            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/python3.5</Path>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib64/lib*.so.*</Path>
             <Path fileType="library">/usr/lib64/lib*.so</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0</Path>
             <Path fileType="library">/usr/lib64/gitg</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gitg</Path>
         </Files>
     </Package>
     <Package>
@@ -44,18 +44,18 @@
             <Dependency release="current">gitg</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/share/vala*</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib64/pkgconfig</Path>
+            <Path fileType="data">/usr/share/vala*</Path>
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2016-02-17</Date>
+        <Update release="6">
+            <Date>2016-02-25</Date>
             <Version>3.18.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Your Name Here</Name>
-            <Email>your.email@address</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Update>
     </History>
 </PISI>
