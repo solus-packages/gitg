@@ -2,10 +2,11 @@
     <Source>
         <Name>gitg</Name>
         <Packager>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
         <License>GPL-2.0</License>
+        <PartOf>programming</PartOf>
         <Summary xml:lang="en">gitg is the GNOME GUI client to view git repositories.</Summary>
         <Description xml:lang="en">gitg is the GNOME GUI client to view git repositories.
 </Description>
@@ -18,20 +19,32 @@
 </Description>
         <PartOf>programming</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/python3.5</Path>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python3.5/site-packages/gi/overrides/GitgExt.py</Path>
+            <Path fileType="library">/usr/lib/python3.5/site-packages/gi/overrides/__pycache__/GitgExt.cpython-35.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.5/site-packages/gi/overrides/__pycache__/GitgExt.cpython-35.pyc</Path>
+            <Path fileType="library">/usr/lib64/girepository-1.0/Gitg-1.0.typelib</Path>
+            <Path fileType="library">/usr/lib64/girepository-1.0/GitgExt-1.0.typelib</Path>
+            <Path fileType="library">/usr/lib64/gitg/plugins/diff.plugin</Path>
+            <Path fileType="library">/usr/lib64/gitg/plugins/files.plugin</Path>
+            <Path fileType="library">/usr/lib64/gitg/plugins/libdiff.so</Path>
+            <Path fileType="library">/usr/lib64/gitg/plugins/libfiles.so</Path>
             <Path fileType="library">/usr/lib64/lib*.so.*</Path>
-            <Path fileType="library">/usr/lib64/lib*.so</Path>
-            <Path fileType="library">/usr/lib64/girepository-1.0</Path>
-            <Path fileType="library">/usr/lib64/gitg</Path>
-            <Path fileType="data">/usr/share/appdata</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="data">/usr/share/glib-2.0</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/gir-1.0</Path>
-            <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/appdata/gitg.appdata.xml</Path>
+            <Path fileType="data">/usr/share/applications/gitg.desktop</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Gitg-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GitgExt-1.0.gir</Path>
             <Path fileType="data">/usr/share/gitg</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.gitg.gschema.xml</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/gitg.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/22x22/apps/gitg.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/24x24/apps/gitg.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/gitg.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/gitg.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/gitg.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/gitg-symbolic.svg</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
     <Package>
@@ -41,21 +54,22 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="current">gitg</Dependency>
+            <Dependency release="7">gitg</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib64/pkgconfig</Path>
-            <Path fileType="data">/usr/share/vala*</Path>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/*.pc</Path>
+            <Path fileType="data">/usr/share/vala*/vapi/*</Path>
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2016-02-25</Date>
+        <Update release="7">
+            <Date>2016-05-12</Date>
             <Version>3.18.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>

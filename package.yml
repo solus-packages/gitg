@@ -1,13 +1,13 @@
 name       : gitg
 version    : 3.18.0
-release    : 6
+release    : 7
 source     :
     - https://download.gnome.org/sources/gitg/3.18/gitg-3.18.0.tar.xz : fa4b7b9c492f13f5f1d864af1281ea377ac8c7619c856e05f533b18989edf421
 license    : GPL-2.0
+component  : programming
 summary    : gitg is the GNOME GUI client to view git repositories.
 description: |
     gitg is the GNOME GUI client to view git repositories.
-libsplit : no
 builddeps  :
     - pkgconfig(gee-0.8)
     - pkgconfig(gobject-introspection-1.0)
