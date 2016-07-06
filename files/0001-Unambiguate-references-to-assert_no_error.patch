@@ -1,0 +1,56 @@
+From 84eee97117fc358544095541d5a54eca7639bb0f Mon Sep 17 00:00:00 2001
+From: Jesse van den Kieboom <jessevdk@gnome.org>
+Date: Thu, 24 Sep 2015 22:34:59 +0200
+Subject: [PATCH 1/1] Unambiguate references to assert_no_error
+
+---
+ tests/libgitg/test-stage.vala |  9 +++++----
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/tests/libgitg/test-stage.vala b/tests/libgitg/test-stage.vala
+index 1eed96f..3106c6c 100644
+--- a/tests/libgitg/test-stage.vala
++++ b/tests/libgitg/test-stage.vala
+@@ -17,6 +17,7 @@
+  * along with gitg. If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
++using Gitg.Test;
+ using Gitg.Test.Assert;
+ 
+ class LibGitg.Test.Stage : Gitg.Test.Repository
+@@ -103,7 +104,7 @@ class LibGitg.Test.Stage : Gitg.Test.Repository
+ 			try
+ 			{
+ 				stage.stage.end(res);
+-			} catch (Error e) { assert_no_error(e); }
++			} catch (Error e) { Assert.assert_no_error(e); }
+ 
+ 			var m = new Gee.HashMap<string, Ggit.StatusFlags>();
+ 
+@@ -130,7 +131,7 @@ class LibGitg.Test.Stage : Gitg.Test.Repository
+ 			try
+ 			{
+ 				stage.unstage.end(res);
+-			} catch (Error e) { assert_no_error(e); }
++			} catch (Error e) { Assert.assert_no_error(e); }
+ 
+ 			var m = new Gee.HashMap<string, Ggit.StatusFlags>();
+ 
+@@ -157,7 +158,7 @@ class LibGitg.Test.Stage : Gitg.Test.Repository
+ 			try
+ 			{
+ 				stage.revert.end(res);
+-			} catch (Error e) { assert_no_error(e); }
++			} catch (Error e) { Assert.assert_no_error(e); }
+ 
+ 			var m = new Gee.HashMap<string, Ggit.StatusFlags>();
+ 
+@@ -183,7 +184,7 @@ class LibGitg.Test.Stage : Gitg.Test.Repository
+ 			try
+ 			{
+ 				stage.delete.end(res);
+-			} catch (Error e) { assert_no_error(e); }
++			} catch (Error e) { Assert.assert_no_error(e); }
+ 
+ 			var m = new Gee.HashMap<string, Ggit.StatusFlags>();

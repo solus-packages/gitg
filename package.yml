@@ -1,17 +1,16 @@
 name       : gitg
 version    : 3.18.0
-release    : 7
+release    : 8
 source     :
     - https://download.gnome.org/sources/gitg/3.18/gitg-3.18.0.tar.xz : fa4b7b9c492f13f5f1d864af1281ea377ac8c7619c856e05f533b18989edf421
 license    : GPL-2.0
-component  : programming
+component  : programming.tools
 summary    : gitg is the GNOME GUI client to view git repositories.
 description: |
     gitg is the GNOME GUI client to view git repositories.
 builddeps  :
     - pkgconfig(gee-0.8)
     - pkgconfig(gobject-introspection-1.0)
-    - pkgconfig(gsettings-desktop-schemas)
     - pkgconfig(gtkspell3-3.0)
     - pkgconfig(gtk+-3.0)
     - pkgconfig(gtksourceview-3.0)
@@ -26,9 +25,16 @@ builddeps  :
     - pkgconfig(webkit2gtk-4.0)
     - gnome-common
     - git
+    - gsettings-desktop-schemas-devel
     - intltool
     - vala
 setup      : |
+    # Patch things
+    sed -i 's:0.24.0:0.24.1:g' configure
+    %patch -p1 < $pkgfiles/0001-Bump-libgit2-glib-to-0.23.11-and-fix-api-break.patch
+    %patch -p1 < $pkgfiles/0001-Unambiguate-references-to-assert_no_error.patch
+    sed -i 's:assert_no_error(e):Assert.assert_no_error(e):g' tests/libgitg/support-repository.vala
+    sed -i 's:assert_no_error(e):Assert.assert_no_error(e):g' tests/gitg/support-repository.vala
     %configure --prefix=/usr --disable-static --disable-maintainer-mode
 build      : |
     %make
