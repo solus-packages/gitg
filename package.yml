@@ -1,8 +1,8 @@
 name       : gitg
-version    : 3.22.0
-release    : 11
+version    : 3.23.90
+release    : 12
 source     :
-    - http://ftp.gnome.org/pub/gnome/sources/gitg/3.22/gitg-3.22.0.tar.xz : ba6895f85c18748294075980a5e03e0936ad4e84534dbb0d8f9e29aa874ddeaf
+    - http://ftp.gnome.org/pub/GNOME/sources/gitg/3.23/gitg-3.23.90.tar.xz : afb9903e33796ca5149651569280ce15dd53e7d38722146a91db408b9e426f54
 license    : GPL-2.0
 component  : programming.tools
 summary    : gitg is the GNOME GUI client to view git repositories.
