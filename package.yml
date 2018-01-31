@@ -1,6 +1,6 @@
 name       : gitg
 version    : 3.26.0
-release    : 14
+release    : 15
 source     :
     - https://download.gnome.org/sources/gitg/3.26/gitg-3.26.0.tar.xz : 26730d437d6a30d6e341b9e8da99d2134dce4b96022c195609f45062f82b54d5
 license    : GPL-2.0
