@@ -2,10 +2,10 @@
     <Source>
         <Name>gitg</Name>
         <Packager>
-            <Name>Peter O&apos;Connor</Name>
-            <Email>peter@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
-        <License>GPL-2.0</License>
+        <License>GPL-2.0-only</License>
         <PartOf>programming.tools</PartOf>
         <Summary xml:lang="en">gitg is the GNOME GUI client to view git repositories.</Summary>
         <Description xml:lang="en">gitg is the GNOME GUI client to view git repositories.
@@ -54,7 +54,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="15">gitg</Dependency>
+            <Dependency release="16">gitg</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/</Path>
@@ -64,12 +64,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="15">
-            <Date>2018-01-31</Date>
+        <Update release="16">
+            <Date>2018-04-23</Date>
             <Version>3.26.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Peter O&apos;Connor</Name>
-            <Email>peter@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>
